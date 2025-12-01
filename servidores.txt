@@ -1,0 +1,5 @@
+8.8.8.8
+google.com
+192.168.1.1
+127.0.0.1
+algo.que.no.existe
