@@ -16,14 +16,10 @@ def hacer_ping(host):
         return respuesta.returncode == 0
     except Exception:
         return False
-
-def main():
-    archivo_hosts = "servidores.txt"
     
-    print(f"\n--- 🔎 MONITOR DE RED: {datetime.datetime.now().strftime('%H:%M:%S')} ---")
-    print(f"{'HOST':<25} {'ESTADO'}")
-    print("-" * 40)
 
+def test_pings():
+    archivo_hosts = "servidores.txt"
     try:
         with open(archivo_hosts, "r") as f:
             lista_hosts = f.readlines()
@@ -42,5 +38,19 @@ def main():
     except Exception as e:
         print(f"❌ Error inesperado: {e}")
 
+       
+
+def main():
+    
+    
+    print(f"\n--- 🔎 MONITOR DE RED: {datetime.datetime.now().strftime('%H:%M:%S')} ---")
+    print(f"{'HOST':<25} {'ESTADO'}")
+    print("-" * 40)
+
+    test_pings()
+
+  
 if __name__ == "__main__":
     main()
+
+
